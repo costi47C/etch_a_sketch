@@ -60,4 +60,4 @@ rainbowz.addEventListener('click', rainbow);
 grey.addEventListener('click', hover);
 clearBtn.addEventListener('click', clear);
 
-createGrid(8);
+createGrid();
