@@ -3,13 +3,13 @@ let btn = document.getElementById('btn');
 let rainbowz = document.getElementById('rainbow');
 let grey = document.getElementById('grey');
 let clearBtn = document.getElementById('clear');
+let gridSize = 8;
 
-function createGrid(nr) {
-    nr = prompt('Grid size')
-    container.style.gridTemplateColumns = `repeat(${nr}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${nr}, 1fr)`;
+function createGrid() {
+    container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
-    for (let i = 0; i < nr * nr; i++) {
+    for (let i = 0; i < gridSize * gridSize; i++) {
         let squares = document.createElement('div');
         squares.classList.add('square');
         squares.textContent = ' ';
@@ -17,7 +17,7 @@ function createGrid(nr) {
     }
 
     hover();
-    
+
 }
 
 function hover() {
@@ -33,6 +33,7 @@ function newGrid() {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
+    gridSize = prompt('New grid size?')
     createGrid();
 }
 

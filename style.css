@@ -3,6 +3,10 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-size: 65px;
+}
+
 .container {
     display: grid;
     width: 50%;
@@ -15,6 +19,17 @@ body {
     border: 2px solid black;
 }
 
-.square:hover {
-    /*background-color: aquamarine;*/
+.buttons {
+    margin: 15px auto;
+}
+
+.myBtn {
+    background-color: rgb(76, 155, 175); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
